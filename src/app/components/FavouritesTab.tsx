@@ -2,6 +2,7 @@ import * as React from 'react';
 import FactCard from './FactCard';
 import { ICatFact } from './TabsComponent';
 import { removeFromFav } from '../variables';
+import { Grid } from '@mui/material';
 
 
 interface FavouritesTabProps {
@@ -12,7 +13,7 @@ interface FavouritesTabProps {
 export default function FavouritesTab(props: FavouritesTabProps) {
     const { favourites, handleRemoveFavourite } = props;
 
-    return React.useMemo(() =>
+    const favouritesMemo = React.useMemo(() =>
         favourites.map((favFact, index) =>
             (<FactCard
                 text={favFact.text}
@@ -22,4 +23,8 @@ export default function FavouritesTab(props: FavouritesTabProps) {
             />)
             ), [favourites]
     );
+
+    return <Grid>
+        {favouritesMemo}
+    </Grid>
 }
