@@ -5,6 +5,11 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import TabsComponent from './app/components/TabsComponent';
+import { Container } from '@mui/material';
 
 const root = createRoot(document.body);
-root.render(<TabsComponent/>);
+root.render(
+    <Container>
+        <TabsComponent/>
+    </Container>
+);

@@ -10,5 +10,6 @@ export const addToFav = "Add to favourites";
 export const removeFromFav = "Remove from favourites";
 export const factsTabTitle = "Facts";
 export const favouritesTabTitle = "Favourites";
+export const errorMessage = "Sorry, something went wrong, we're working on that";
 
 
