@@ -1,7 +1,9 @@
-import { Card, CardActions, CardContent, Typography, Button } from '@mui/material';
+import {  CardActions, CardContent, Typography, Button } from '@mui/material';
 import React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
+import { StyledCard } from '../styledComponents/Card';
+import { StyledTypography } from '../styledComponents/Typography';
 
 export interface FactCardProps {
     text: string;
@@ -9,13 +11,6 @@ export interface FactCardProps {
     buttonLabel: string;
 }
 
-const StyledCard = styled(Card)`
-    margin-bottom: 2em;
-`;
-
-const StyledTypography = styled(Typography)`
-    overflow-wrap: break-word;
-`
 
 export default function FactCard(props: FactCardProps) {
     const { text, onButtonPress, buttonLabel } = props;

@@ -1,6 +1,6 @@
 import { renderHook, waitFor } from "@testing-library/react"
 import { act } from "@testing-library/react";
-import useGetFact from "./use-get-fact"
+import useGetFact from "./useGetFact"
 import axios from "axios";
 import { catFact } from "./catFact.fixture";
 

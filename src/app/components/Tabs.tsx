@@ -7,7 +7,7 @@ import FactTab from './FactTab';
 import FavouritesTab from './FavouritesTab';
 import { addToFav, errorMessage, factsTabTitle, favouritesTabTitle } from '../variables';
 import { Grid, Typography } from '@mui/material';
-import useGetFact from '../services/use-get-fact';
+import useGetFact from '../services/useGetFact';
 
 function tabProps(index: number) {
     return {
@@ -43,8 +43,8 @@ export default function TabsComponent() {
         setFavourites(currentFav => [...currentFav, catFact]);
     }
 
-    const handleRemoveFavourite = (catFact: ICatFact) => {
-        setFavourites(currentFav => currentFav.filter(fav => fav.text != catFact.text));
+    const handleRemoveFavourite = (id: string) => {
+        setFavourites(currentFav => currentFav.filter(fav => fav.id != id));
     }
 
     const processFavs = React.useMemo(() => processFavourites(favourites), [favourites]);

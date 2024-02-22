@@ -1,13 +1,13 @@
 import * as React from 'react';
 import FactCard from './FactCard';
-import { ICatFact } from './TabsComponent';
+import { ICatFact } from './Tabs';
 import { removeFromFav } from '../variables';
 import { Grid } from '@mui/material';
 
 
 interface FavouritesTabProps {
     favourites: Array<ICatFact>;
-    handleRemoveFavourite: (catFact: ICatFact) => void;
+    handleRemoveFavourite: (id: string) => void;
 }
 
 export default function FavouritesTab(props: FavouritesTabProps) {
@@ -18,7 +18,7 @@ export default function FavouritesTab(props: FavouritesTabProps) {
             (<FactCard
                 text={favFact.text}
                 key={index}
-                onButtonPress={() => handleRemoveFavourite(favFact)}
+                onButtonPress={() => handleRemoveFavourite(favFact.id)}
                 buttonLabel={removeFromFav}
             />)
             ), [favourites]

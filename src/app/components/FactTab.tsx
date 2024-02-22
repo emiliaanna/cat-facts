@@ -1,6 +1,6 @@
 import * as React from 'react';
 import FactCard from './FactCard';
-import { ICatFact } from './TabsComponent';
+import { ICatFact } from './Tabs';
 import { Grid } from '@mui/material';
 
 

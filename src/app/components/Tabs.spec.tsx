@@ -1,10 +1,10 @@
 import { render, waitFor } from "@testing-library/react";
-import TabsComponent from "./TabsComponent";
+import TabsComponent from "./Tabs";
 import * as React from 'react';
 
 jest.mock('axios');
 
-jest.mock('../services/use-get-fact', () => {
+jest.mock('../services/useGetFact', () => {
     return jest.fn(() => ({
         loading: false,
         error: null,

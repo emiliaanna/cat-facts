@@ -19,8 +19,7 @@ describe('FactCard', () => {
         const setState = jest.fn();
         jest
             .spyOn(React, 'useState')
-            // @ts-ignore
-            .mockImplementationOnce((initState: any) => [initState, setState]);
+            .mockImplementationOnce(() => [false, setState]);
         render(<FactCard {...props} />);
         const card = getByText(props.text);
         act(() => fireEvent.mouseOver(card));
@@ -31,8 +30,7 @@ describe('FactCard', () => {
         const setState = jest.fn();
         jest
             .spyOn(React, 'useState')
-            // @ts-ignore
-            .mockImplementationOnce((initState: any) => [initState, setState]);
+            .mockImplementationOnce(() => [false, setState]);
         render(<FactCard {...props} />);
         const card = getByText(props.text);
         act(() => fireEvent.mouseOver(card));
