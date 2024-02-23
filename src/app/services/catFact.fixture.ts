@@ -1,4 +1,4 @@
-import { CatFactType } from './useGetFact';
+import { CatFactType } from './useFact';
 
 export const catFact: CatFactType = {
   text: 'cat fact',
